@@ -6,12 +6,12 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 20:57:05 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/25 03:31:20 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/10/07 17:34:49 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Color4.h"
-#include "ft_string.h"
+#include <ft_string.h>
 
 static int	hex_to_int(char c)
 {
