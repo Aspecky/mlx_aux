@@ -1,8 +1,8 @@
 SRC_DIR := .
 BUILD_DIR := ./build
 
-INCLUDES := -I$(HOME)/Documents/Github/42cursus/ftlibc/source/include \
-			-I$(HOME)/Documents/Github/42cursus/mlx_aux/source/include
+INCLUDES := -I../include \
+			-I/usr/local/include/ftlibc
 HEADER := $(SRC_DIR)/$(NAME:.a=.h)
 SRCS := $(wildcard $(SRC_DIR)/*.c)
 OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
