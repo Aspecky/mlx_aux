@@ -1,0 +1,2 @@
+CompileFlags:
+  Add: [-I/home/aspecky/Documents/Github/42cursus/mlx_aux/source/include]
