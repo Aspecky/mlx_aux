@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithms.h                                       :+:      :+:    :+:   */
+/*   unit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/19 21:07:36 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/29 22:27:22 by mtarrih          ###   ########.fr       */
+/*   Created: 2025/11/22 17:56:06 by mtarrih           #+#    #+#             */
+/*   Updated: 2025/11/22 18:50:10 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ALGORITHMS_H
-# define ALGORITHMS_H
+#include "Vector2.h"
+#include <math.h>
 
-# include "mlx_aux_types.h"
+t_vector2	vector2_unit(t_vector2 a)
+{
+	double	magnitude;
 
-int	is_line2d_visible(t_line2d line, int32_t width, int32_t height);
-
-#endif
+	magnitude = sqrt(a.x * a.x + a.y * a.y);
+	if (magnitude == 0)
+		return ((t_vector2){0, 0});
+	return ((t_vector2){a.x/magnitude, a.y/magnitude});
+}
