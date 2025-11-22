@@ -6,7 +6,7 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 21:21:08 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/10/30 21:23:45 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/22 19:44:28 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,9 @@
 t_vector2	vector2_add(t_vector2 a, t_vector2 b)
 {
 	return ((t_vector2){a.x + b.x, a.y + b.y});
+}
+
+t_ivector2	ivector2_add(t_ivector2 a, t_ivector2 b)
+{
+	return ((t_ivector2){a.x + b.x, a.y + b.y});
 }
