@@ -3,6 +3,7 @@ NAME := mlx_aux.a
 LIBS := mlx_aux algorithms
 
 CLASSES :=	Color4 \
+			Vector2 \
 			HookService
 
 UNITS := $(LIBS) $(CLASSES)
