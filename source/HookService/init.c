@@ -6,7 +6,7 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 02:47:54 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/11/28 22:34:36 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/29 00:46:06 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 static void	key_hook(mlx_key_data_t keydata, void *param)
 {
 	t_hookservice	*service;
-	t_slnode		*node;
+	t_hook_node		*node;
 	t_keybindinfo	*info;
 	size_t			i;
 
 	service = param;
-	node = service->key_binds->head;
+	node = service->key_binds;
 	while (node)
 	{
 		info = node->data;
@@ -44,12 +44,12 @@ static void	mouse_hook(mouse_key_t button, action_t action,
 						modifier_key_t mods, void *param)
 {
 	t_hookservice	*service;
-	t_slnode		*node;
+	t_hook_node		*node;
 	t_mousebindinfo	*info;
 	size_t			i;
 
 	service = param;
-	node = service->mouse_binds->head;
+	node = service->mouse_binds;
 	while (node)
 	{
 		info = node->data;
@@ -70,11 +70,11 @@ static void	mouse_hook(mouse_key_t button, action_t action,
 static void	general_hook(void *param)
 {
 	t_hookservice	*service;
-	t_slnode		*node;
+	t_hook_node		*node;
 	t_genbindinfo	*info;
 
 	service = param;
-	node = service->general_binds->head;
+	node = service->general_binds;
 	while (node)
 	{
 		info = node->data;
@@ -93,11 +93,9 @@ t_hookservice	*hookservice_init(mlx_t *mlx)
 	static t_hookservice	service;
 
 	service.mlx = mlx;
-	service.key_binds = sllist_new();
-	service.mouse_binds = sllist_new();
-	service.general_binds = sllist_new();
-	if (!service.key_binds || !service.mouse_binds || !service.general_binds)
-		return (0);
+	service.key_binds = NULL;
+	service.mouse_binds = NULL;
+	service.general_binds = NULL;
 	mlx_key_hook(mlx, key_hook, &service);
 	mlx_mouse_hook(mlx, mouse_hook, &service);
 	mlx_loop_hook(mlx, general_hook, &service);

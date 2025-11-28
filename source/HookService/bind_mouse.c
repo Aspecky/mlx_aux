@@ -6,7 +6,7 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 18:16:12 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/31 03:19:34 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/29 00:46:06 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ int	bind_mouse(t_hookservice *service, mlx_mousefunc callback,
 	info->callback = callback;
 	info->keys = keys;
 	info->param = param;
-	if (!sllist_append(service->mouse_binds, info))
+	if (!hook_list_append(&service->mouse_binds, info))
+	{
+		free(info);
 		return (0);
+	}
 	return (1);
 }
