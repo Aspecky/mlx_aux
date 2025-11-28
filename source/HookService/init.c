@@ -6,13 +6,13 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 02:47:54 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/31 03:19:34 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/28 22:34:36 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HookService.h"
 #include "_HookService.h"
-#include <mlx42.h>
+#include <MLX42/MLX42.h>
 
 static void	key_hook(mlx_key_data_t keydata, void *param)
 {

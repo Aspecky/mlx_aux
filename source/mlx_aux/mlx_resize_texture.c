@@ -6,12 +6,12 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 00:00:00 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/11/28 22:21:16 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/28 22:34:36 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mlx_aux.h"
-#include <mlx42.h>
+#include <MLX42/MLX42.h>
 #include <stdlib.h>
 
 static void	*ft_memcpy(void *dst, const void *src, size_t n)

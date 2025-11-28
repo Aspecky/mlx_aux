@@ -5,6 +5,7 @@
 !Makefile
 
 # Config
+source/.env
 .vscode
 .clangd
 

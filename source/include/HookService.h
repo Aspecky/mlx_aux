@@ -6,14 +6,14 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 02:29:22 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/11/28 21:18:29 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/28 22:34:36 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HOOKSERVICE_H
 # define HOOKSERVICE_H
 
-# include <mlx42.h>
+# include <MLX42/MLX42.h>
 # include "SinglyLinkedList.h"
 
 typedef void	(*t_mousebindfunc)(mouse_key_t button, action_t action,

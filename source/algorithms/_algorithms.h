@@ -6,14 +6,14 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 21:07:36 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/30 00:03:41 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/28 22:33:01 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _ALGORITHMS_H
 # define _ALGORITHMS_H
 
-# include "mlx_aux_types.h"
+# include "../include/mlx_aux_types.h"
 
 # define OUTCODE_INSIDE 0
 # define OUTCODE_LEFT 1
