@@ -6,14 +6,14 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 21:15:29 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/30 00:40:54 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/28 21:18:29 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _HOOKSERVICE_H
 # define _HOOKSERVICE_H
 
-# include "mlx42.h"
+# include <mlx42.h>
 
 typedef struct s_keybindinfo
 {

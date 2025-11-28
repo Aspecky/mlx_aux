@@ -6,12 +6,12 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 23:40:37 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/30 00:45:15 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/28 21:18:29 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mlx_aux.h"
-#include "mlx42.h"
+#include <mlx42.h>
 
 void	pmlx_put_pixel(mlx_image_t *img, int32_t x, int32_t y, uint32_t color)
 {
