@@ -6,12 +6,12 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 20:57:05 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/10/07 17:34:49 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/28 22:15:12 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Color4.h"
-#include <ft_string.h>
+#include <stddef.h>
 
 static int	hex_to_int(char c)
 {
@@ -32,7 +32,9 @@ uint32_t	color4_from_hex(const char *hex)
 	if (*hex == '#')
 		hex++;
 	rgb = (t_color_rgb){0, 0, 0, 255};
-	len = ft_strlen(hex);
+	len = 0;
+	while (hex[len])
+		len++;
 	if (len >= 2)
 		rgb.r = (hex_to_int(hex[0]) << 4) | hex_to_int(hex[1]);
 	if (len >= 4)

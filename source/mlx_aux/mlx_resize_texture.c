@@ -6,14 +6,26 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 00:00:00 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/11/21 00:54:57 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/11/28 22:21:16 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mlx_aux.h"
-#include <ft_string.h>
 #include <mlx42.h>
 #include <stdlib.h>
+
+static void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		((uint8_t *)dst)[i] = ((uint8_t *)src)[i];
+		i++;
+	}
+	return (dst);
+}
 
 bool	mlx_resize_texture(mlx_t *mlx, mlx_texture_t *texture,
 			uint32_t nwidth, uint32_t nheight)
