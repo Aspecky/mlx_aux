@@ -6,7 +6,7 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 22:59:43 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/30 00:31:45 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/12/13 15:15:55 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static inline void	init_hsv_convert(t_color4_from_hsv *conv, t_color_hsv hsv)
 	conv->g = 0;
 	conv->b = 0;
 	conv->c = hsv.v * hsv.s;
-	conv->h_prime = fmodf(hsv.h / 60.0f, 6);
-	conv->x = conv->c * (1 - fabsf(fmodf(conv->h_prime, 2) - 1));
+	conv->h_prime = fmod(hsv.h / 60.0, 6);
+	conv->x = conv->c * (1 - fabs(fmod(conv->h_prime, 2) - 1));
 	conv->m = hsv.v - conv->c;
 }
 

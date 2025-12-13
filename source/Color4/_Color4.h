@@ -6,7 +6,7 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 03:02:09 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/03/31 01:29:56 by mtarrih          ###   ########.fr       */
+/*   Updated: 2025/12/13 15:15:55 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,24 @@
 
 typedef struct s_color4_to_hsv
 {
-	float	r;
-	float	g;
-	float	b;
+	double	r;
+	double	g;
+	double	b;
 	uint8_t	alpha;
-	float	max;
-	float	min;
-	float	delta;
+	double	max;
+	double	min;
+	double	delta;
 }	t_color4_to_hsv;
 
 typedef struct s_color4_from_hsv
 {
-	float	r;
-	float	g;
-	float	b;
-	float	c;
-	float	h_prime;
-	float	x;
-	float	m;
+	double	r;
+	double	g;
+	double	b;
+	double	c;
+	double	h_prime;
+	double	x;
+	double	m;
 }	t_color4_from_hsv;
 
 #endif

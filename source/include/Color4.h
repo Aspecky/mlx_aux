@@ -27,17 +27,17 @@ typedef struct s_color_rgb
 
 typedef struct s_color_hsv
 {
-	float	h;
-	float	s;
-	float	v;
+	double	h;
+	double	s;
+	double	v;
 	uint8_t	alpha;
 }	t_color_hsv;
 
 typedef struct s_color_any
 {
-	float	a;
-	float	b;
-	float	c;
+	double	a;
+	double	b;
+	double	c;
 	uint8_t	alpha;
 }	t_color_any;
 
@@ -50,6 +50,6 @@ uint32_t	color4_from_hex(const char *hex);
 
 uint32_t	color4_set_a(uint32_t color, uint8_t alpha);
 
-t_color_hsv	lerp_hsv(t_color_hsv src, t_color_hsv dst, float t);
+t_color_hsv	lerp_hsv(t_color_hsv src, t_color_hsv dst, double t);
 
 #endif
