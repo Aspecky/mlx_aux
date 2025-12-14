@@ -2,7 +2,7 @@ SRC_DIR := .
 BUILD_DIR := ./build
 
 INCLUDES := -I../include \
-			-I$(LIBMLX_DIR)
+			-I$(LIBMLX_DIR)/include
 HEADER := $(SRC_DIR)/$(NAME:.a=.h)
 SRCS := $(wildcard $(SRC_DIR)/*.c)
 OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
