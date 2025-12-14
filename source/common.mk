@@ -1,12 +1,8 @@
--include ../.env
-
 SRC_DIR := .
 BUILD_DIR := ./build
 
-INCLUDES := -I../include
-ifdef CODAM_MLX_INCLUDE
-INCLUDES += -I$(CODAM_MLX_INCLUDE)
-endif
+INCLUDES := -I../include \
+			-I$(LIBMLX_DIR)
 HEADER := $(SRC_DIR)/$(NAME:.a=.h)
 SRCS := $(wildcard $(SRC_DIR)/*.c)
 OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
