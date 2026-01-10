@@ -6,7 +6,7 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 00:00:00 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/11/28 22:34:36 by mtarrih          ###   ########.fr       */
+/*   Updated: 2026/01/10 19:11:42 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,7 @@ bool	mlx_resize_texture(mlx_t *mlx, mlx_texture_t *texture,
 	if (!img)
 		return (false);
 	if (!mlx_resize_image(img, nwidth, nheight))
-	{
-		mlx_delete_image(mlx, img);
-		return (false);
-	}
+		return (mlx_delete_image(mlx, img), false);
 	new_size = nwidth * nheight * texture->bytes_per_pixel;
 	new_pixels = malloc(new_size);
 	if (!new_pixels)

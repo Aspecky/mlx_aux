@@ -6,7 +6,7 @@
 /*   By: mtarrih <mtarrih@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 00:00:00 by mtarrih           #+#    #+#             */
-/*   Updated: 2025/11/29 00:46:06 by mtarrih          ###   ########.fr       */
+/*   Updated: 2026/01/10 19:13:34 by mtarrih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,15 +62,14 @@ void	hook_list_free(t_hook_node *head, void (*free_func)(void *))
 	}
 }
 
-void	hook_list_remove_if(t_hook_node **head, int (*predicate)(void *, void *),
-		void *compare_data, void (*free_func)(void *))
+void	hook_list_remove_if(t_hook_node **head, int (*predicate)(void *,
+			void *), void *compare_data, void (*free_func)(void *))
 {
 	t_hook_node	*current;
 	t_hook_node	*prev;
 	t_hook_node	*next;
 
-	prev = NULL;
-	current = *head;
+	((void)0, prev = NULL, current = *head);
 	while (current)
 	{
 		next = current->next;

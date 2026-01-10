@@ -20,7 +20,7 @@ t_vector2	vector2_unit(t_vector2 a)
 	mag = sqrt(a.x * a.x + a.y * a.y);
 	if (mag == 0)
 		return ((t_vector2){0, 0});
-	return ((t_vector2){a.x/mag, a.y/mag});
+	return ((t_vector2){a.x / mag, a.y / mag});
 }
 
 t_ivector2	ivector2_unit(t_ivector2 a)
@@ -30,5 +30,5 @@ t_ivector2	ivector2_unit(t_ivector2 a)
 	mag = sqrt(a.x * a.x + a.y * a.y);
 	if (mag == 0)
 		return ((t_ivector2){0, 0});
-	return ((t_ivector2){(int)(a.x/mag), (int)(a.y/mag)});
+	return ((t_ivector2){(int)(a.x / mag), (int)(a.y / mag)});
 }
